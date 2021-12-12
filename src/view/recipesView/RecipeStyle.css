@@ -1,18 +1,14 @@
 .search-container { 
     display: grid;       
-    /* background-color: rgb(34, 29, 26); */
     padding-bottom: 100%;
  }
  .txt-field{
     display: grid;
     margin: 23px 10px 0px 10px;
-
 }
+
 .css-sqs87j-MuiInputBase-root-MuiOutlinedInput-root{
    margin-top: 2px;
 }
-/*.item3{
-    grid-column: 3/4;
-    grid-row: 1/2;
-} */
+
 

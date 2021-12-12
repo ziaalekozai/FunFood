@@ -1,8 +1,8 @@
 
 import React from 'react';
 import { useEffect, useState } from 'react'
-import {DisplayRecipe} from './recipe/DisplayRecipe'
-import {ProgressBar} from '../../components/progressBar/ProgressBar'
+import { DisplayRecipe } from './recipe/DisplayRecipe'
+import { ProgressBar } from '../../components/progressBar/ProgressBar'
 import TextField from '@mui/material/TextField';
 import IconButton from "@material-ui/core/IconButton";
 import InputAdornment from "@material-ui/core/InputAdornment";
@@ -10,8 +10,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import './RecipeStyle.css'
 
 export const RecipeView = () => {
- 
-  const value= "Find your recipes";
+
+	const value = "Find your recipes";
 	const APP_ID = '5ac39ccd'
 	const APP_KEY = '36ce344a8e3b488843d7a5a4f3e8b215'
 	const [recipes, setRecipes] = useState([])
@@ -44,34 +44,35 @@ export const RecipeView = () => {
 		event.preventDefault()
 		setQuery(search)
 	}
-	const display=()=>{
-		if(!loading){
-			return(<DisplayRecipe recipes= {recipes}/>);
+	const display = () => {
+		if (!loading) {
+			return (<DisplayRecipe recipes={recipes} />);
 		}
 		else {
-			return (<div><ProgressBar/></div>);
+			return (<div><ProgressBar /></div>);
 		}
 	}
-  return (
-	
+	return (
+
 		<div className='search-container'>
 			<div className='txt-field'>
-               <TextField  onChange={updateSearch}
-       				id="standard-bare"        
-        			variant="outlined"
+				<TextField onChange={updateSearch}
+					id="standard-bare"
+					variant="outlined"
 					color="success"
-        			label={value}
-       				InputProps={{
-      					 endAdornment: (
-     			 <InputAdornment >
-       				 <IconButton  >
-        			   <SearchIcon className="searchIcon" onClick={getSearch} />
-       				 </IconButton>
-      			 </InputAdornment>
-     		 	)}}/>
-			 </div>	 	 
-		      {display()}	  
-	     </div> 
-  );
+					label={value}
+					InputProps={{
+						endAdornment: (
+							<InputAdornment >
+								<IconButton  >
+									<SearchIcon className="searchIcon" onClick={getSearch} />
+								</IconButton>
+							</InputAdornment>
+						)
+					}} />
+			</div>
+			{display()}
+		</div>
+	);
 };
 

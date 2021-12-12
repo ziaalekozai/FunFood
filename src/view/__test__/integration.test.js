@@ -36,6 +36,6 @@ describe('views integration', () => {
     userEvent.click(item1);
     expect(history.location.pathname).toBe('/about');
     //console.log(item1);
-    
+
   });
 });

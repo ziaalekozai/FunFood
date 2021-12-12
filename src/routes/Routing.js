@@ -19,7 +19,6 @@ export const Routing = (props) => {
         <Route exact path={RoutingPath.aboutView} component={AboutView} />
         <Route exact path={RoutingPath.contactView} component={ContactView} />
         <Route exact path={RoutingPath.galleryView} component={GalleryView} />
-
       </Switch>
       <Footer />
     </Router>

@@ -6,15 +6,12 @@
     grid-row-gap: 20px;
     grid-column-gap:20px ;
     justify-items: center;
-    
-    
 } 
-/* .cardItem{
-    width: 300px;
-} */
+
 .css-et1ao3-MuiTypography-root:hover{
    color: black;
 }
+
 .css-83ijpv-MuiTypography-root:hover{
     color: black;   
 }
